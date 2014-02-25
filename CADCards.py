@@ -3,6 +3,11 @@ import random
 from time import sleep
 import sys
 
+
+if sys.version[0] != '3':
+	print("You need to run CADCards with python3")
+	sys.exit(0)
+
 len(sys.argv)
 
 cardBack = pifacecad.LCDBitmap([0b11111,0b10001,0b10001,0b10001,0b10001,0b10001,0b10001,0b11111])

@@ -40,7 +40,7 @@ lines = f.readlines()
 previousHighScore = int(lines[cardTypeNumber-2].replace("\n",""))
 
 f.close()
-
+print("Previous high score")
 print(previousHighScore)
 
 cardNumber=0
@@ -128,8 +128,8 @@ def right(event):
 def rowSwitch(event):
 	x, y = cad.lcd.get_cursor()
 	y = (y+1)%2
-	print(placedCards)
-	print((x-(16-len(cardImages)))+(y*len(cardImages)))
+	#print(placedCards)
+	#print((x-(16-len(cardImages)))+(y*len(cardImages)))
 	if placedCards[(x-(16-len(cardImages)))+(y*len(cardImages))] != -1 and checkDifferent(x,y):
 		cad.lcd.set_cursor(x,y)
 		cad.lcd.blink_on()
@@ -254,4 +254,3 @@ else:
 sleep(2)
 cad.lcd.clear()
 cad.lcd.backlight_off()
-
